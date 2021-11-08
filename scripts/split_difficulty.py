@@ -1,8 +1,4 @@
-class name_user:
-  user_name = input("Hello user. Please, enter your name!")
-
 class Dificulty:
-
   def __init__ (self, words_all):
     self.words_all = words_all
 
@@ -27,19 +23,20 @@ class Dificulty:
     # print(unique_count_word)
     ########
 
-    #### dificulty 4
+    #### dificulty 3
     for words in words_split:
       for character in hard_letters:
         if character in words and len(words) < 7:
           hard_words.append(words)
 
-    ### dificulty 3
+    ### dificulty 2
     for words in words_split:
       for character in hard_letters:
         if character in words and len(words) > 6:
           medium_words.append(words)
 
-    #### difficulty 
+    #### difficulty 1
+    
     a = set(words_split)
     b = set(hard_words)
     c = set(medium_words)
@@ -62,10 +59,10 @@ class Dificulty:
 
 
     with open('fita-hangman\data\easy_words.txt', 'w', encoding='utf-8') as file: 
-      file.write(str(easy_words))
+      file.write(str(set(easy_words)))
 
     with open('fita-hangman\data\medium_words.txt', 'w', encoding='utf-8') as file:
-      file.write(str(medium_words))
+      file.write(str(set(medium_words)))
 
     with open('fita-hangman\data\hard_words.txt', 'w', encoding='utf-8') as file:
-      file.write(str(hard_words))
+      file.write(str(set(hard_words)))

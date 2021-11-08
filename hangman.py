@@ -1,17 +1,21 @@
 from os import name
 from gameplay.game import Game
+
 from scripts.split_difficulty import Dificulty
-from scripts.split_difficulty import name_user
+
 import random 
 from nltk import word_tokenize
 if_new_words = Dificulty(words_all=1)
 if_new_words.diff()
 
-difficulty_info = 'Hello!', name_user() , 'There are 3 difficulty levels:"\n"1st - bez garumzīmēm un mīkstinājumiem and more than 6 letters"\n"2nd - ar garumzīmēm un mīkstinājumiem and more than 6 letters"\n"3rd - ar garumzīmēm un mīkstinājumiem and less than 6 letters'
-## ievadi varbūt vajag while ciklā -> atkārtoti prasa ievadi, kamēr izvēlas 1 no trim
-print(difficulty_info)
+
+
+
 
 while True:
+    difficulty_info = 'Hello! There are 3 difficulty levels:"\n"1st - vārdi bez garumzīmēm un mīkstinājumiem"\n"2nd - ar garumzīmēm un mīkstinājumiem and more than 6 letters"\n"3rd - ar garumzīmēm un mīkstinājumiem and less than 6 letters'
+    ## ievadi varbūt vajag while ciklā -> atkārtoti prasa ievadi, kamēr izvēlas 1 no trim
+    print(difficulty_info)
     difficulty = input("Please, chose your game difficulty level (easy/medium/hard) : ")
 
     if difficulty == 'easy':
